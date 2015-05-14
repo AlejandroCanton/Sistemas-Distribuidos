@@ -1,0 +1,27 @@
+# Alejandro Morales Canton ID:146514
+# con base a lo propuesto por Francisco Gutierrez en
+# https://github.com/Innova4DLab/Play-WebService
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Mis Servicios Web
+
+GET     /multiplicacion/:a/:b    controllers.Application.getMultiplicacion(a: Int,b: Int)
+
+GET     /moneda/:a    controllers.Application.getPesos(a: Int)
+
+GET     /grados/:a    controllers.Application.getCelsius(a: Int)
+
+GET     /palindromo/:a           controllers.Application.getPalindromo(a: String)
+
+GET     /capital/:a           controllers.Application.getCapital(a: String)
+
+GET     /posicion/:a           controllers.Application.getPosicionEmbajada(a: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
